@@ -2,8 +2,8 @@ FROM hypriot/rpi-alpine as build-stage
 
 MAINTAINER Soeren Stelzer
 
-ENV INFLUX_DB_VERSION 1.3.4
-ENV INFLUX_DB_FILE influxdb-${INFLUX_DB_VERSION}_linux_armhf.tar.gz
+ENV VERSION 1.3.4
+ENV INFLUX_DB_FILE influxdb-${VERSION}_linux_armhf.tar.gz
 ENV INFLUX_DB_URL https://dl.influxdata.com/influxdb/releases/${INFLUX_DB_FILE}
 ENV COLLECTD_URL=https://github.com/collectd/collectd/raw/master/src/types.db
 
