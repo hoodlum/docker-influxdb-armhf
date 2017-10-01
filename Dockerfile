@@ -11,7 +11,7 @@ RUN set -xe \
     && apk add --no-cache --virtual .build-deps ca-certificates curl tar \
     && update-ca-certificates \
     && mkdir -p /usr/src \
-    && curl -sSL ${INFLUX_DB_URL} | tar xz --strip 2 -C /usr/src \
+    && curl -sSL ${INFLUX_DB_URL} | tar xz --strip 1 -C /usr/src \
     && curl -o /usr/src/usr/lib/influxdb/types.db ${COLLECTD_URL} \
     && apk del .build-deps \
     && rm -rf /var/cache/apk/*
